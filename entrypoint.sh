@@ -1,4 +1,4 @@
-.#!/bin/sh
+#!/bin/sh
 
 # Startup Xvfb
 Xvfb -ac :99 -screen 0 1600x1200x32 > /dev/null 2>&1 &
