@@ -10,6 +10,8 @@ LABEL "homepage"="https://github.com/mujo-code/puppeteer-headful"
 LABEL "maintainer"="Jacob Lowe"
 
 RUN  apt-get update \
+     # Install nutjs prerequisites
+     && apt-get install -y build-essential libxtst-dev \
      # See https://crbug.com/795759
      && apt-get install -yq libgconf-2-4 \
      # Install latest chrome dev package, which installs the necessary libs to
