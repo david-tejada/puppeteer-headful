@@ -10,6 +10,8 @@ LABEL "homepage"="https://github.com/mujo-code/puppeteer-headful"
 LABEL "maintainer"="Jacob Lowe"
 
 RUN  apt-get update \
+     # Install robotjs prerequisites
+     && apt-get install -y build-essential libxtst-dev \
      # Install latest chrome dev package, which installs the necessary libs to
      # make the bundled version of Chromium that Puppeteer installs work.
      && apt-get install -y wget xvfb --no-install-recommends \
